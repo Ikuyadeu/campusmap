@@ -41,5 +41,14 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  #googlemapAPIを利用する
+  gem "gmaps4rails"
+  #緯度経度を住所から自動生成する
+  gem "geocoder"
+
+  #javascriptを利用する
+  gem 'therubyracer'
+  
 end
 
