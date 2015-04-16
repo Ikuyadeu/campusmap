@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'map/index'
+
   resources :points
 
   # The priority is based upon order of creation: first created -> highest priority.
