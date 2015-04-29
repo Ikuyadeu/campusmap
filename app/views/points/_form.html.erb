@@ -12,22 +12,45 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :名前 %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :詳細 %>
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :latitude %><br>
+    <%= f.label :緯度 %>
     <%= f.text_field :latitude %>
   </div>
   <div class="field">
-    <%= f.label :longitude %><br>
+    <%= f.label :経度 %>
     <%= f.text_field :longitude %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :作成 %>
   </div>
+
+  <div style='width: 800px;'>
+    <div id="map" style='width: 800px; height: 800px;'></div>
+  </div>
+
+  <script type="text/javascript">
+      handler = Gmaps.build('Google');
+      handler.buildMap({ 
+        provider: {
+          zoom: 17,
+          center: new google.maps.LatLng(35.487743,133.068154),
+          panControl: false
+
+        }, 
+        internal: {id: 'map'}
+      }, 
+      function(){
+        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        //handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+
+  </script>
 <% end %>
