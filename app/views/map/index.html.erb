@@ -1,11 +1,15 @@
-<h1>島根大学地図</h1>
-
 <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 800px;'></div>
 </div>
 
 <script type="text/javascript">
     handler = Gmaps.build('Google');
+    //var panoramioLayer = new google.maps.panoramio.PanoramioLayer();
+    //panoramioLayer.setMap(handler);
+
+    //var photoPanel = document.getElementById('photo-panel');
+    //map.controls[google.maps.ControlPosition.RIGHT_TOP].push(photoPanel);
+
     handler.buildMap({ 
     	provider: {
     		zoom: 17,

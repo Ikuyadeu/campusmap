@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :pictures
 
   get 'map/index'
-
+  root to: 'map#index'
   resources :points
 
   # The priority is based upon order of creation: first created -> highest priority.
