@@ -2,8 +2,12 @@ CanpusMap(キャンパスマップ)
 =========================
 島根大学の地図をカテゴリごとに表示
 
-Memo
-====
+Picture
+=======
+![6-1](https://github.com/Ikuyadeu/campusmap/images/ScreenShot.png)
+
+
+
 #Kinds
 1.Computer
 2.Food

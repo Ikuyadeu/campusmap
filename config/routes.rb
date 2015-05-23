@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   resources :pictures
-
-  get 'map/index'
-  root to: 'map#index'
   resources :points
-
+  root to: 'map#index'
+  match '/help',   to: 'map#help',   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
