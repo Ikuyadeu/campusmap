@@ -10,6 +10,7 @@ class MapController < ApplicationController
       #    "width" => 36,
       #    "height" => 36
       #})
+      marker.title point.name
       marker.infowindow point.description
       marker.json({name: point.name})
     end
